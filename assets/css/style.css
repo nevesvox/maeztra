@@ -259,10 +259,10 @@ body {
 }
 
 .secao__colecao--titulo {
-  text-align: left;
   color: #353535;
+  text-align: left;
   font-size: 1.3rem;
-  width: 100%;
+  margin-bottom: 10px;
 }
 
 .secao__colecao--descricao {
@@ -306,6 +306,56 @@ body {
   width: 100%;
 }
 
+.collapsible {
+  display: flex;
+  justify-content: space-between;
+  color: #353535;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1rem;
+}
+
+.content {
+  text-align: left;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+.secao__infos {
+  padding: 20px;
+}
+
+.secao__infos--acoes {
+  margin-right: 20px;
+}
+
+.content--item {
+  padding: 10px;
+  color: #353535;
+}
+
+.cabecalho__desktop {
+  display: none;
+}
+
+.menu__desktop {
+  display: none;
+}
+
+.menu__desktop--item {
+  cursor: pointer;
+}
+
+.menu__desktop--item:hover {
+  color: #faa500;
+}
+
 input[type=text] {
   width: 100%;
   padding: 12px 20px;
@@ -319,6 +369,58 @@ input[type=text] {
 footer {
   background-color: #353535;
   padding: 15px;
+}
+
+@media (min-width: 660px) {
+  .content {
+    display: block;
+  }
+  .secao__infos--acoes {
+    display: none;
+  }
+  .secao__infos {
+    justify-content: center !important;
+  }
+  .menu__desktop {
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #353535;
+  }
+  .cabecalho {
+    display: none;
+  }
+  .cabecalho__desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .cabecalho__logo--img {
+    width: 340px;
+  }
+  .cabecalho__desktop--input {
+    width: 400px !important;
+  }
+  .botao__buscar {
+    margin-top: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .cabecalho__desktop--item {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #353535;
+    cursor: pointer;
+  }
+  .icon {
+    font-size: 1.4rem;
+  }
+  .cabecalho__desktop--item__hover:hover {
+    border-radius: 10px;
+    border: 2px solid #faa500;
+  }
 }
 
 @media (min-width: 800px) {

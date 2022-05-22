@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./assets/css/owl/owl.theme.default.min.css">
 </head>
 <body>
-  <header>
+  <header style="box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.16);">
     <div class="badge">
       Acompanhe as melhores promoções disponíveis aqui na Maeztra.
     </div>
@@ -22,6 +22,32 @@
       </div>
       <svg class="lnr lnr-magnifier"><use xlink:href="#lnr-magnifier"></use></svg>
       <svg class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use></svg>
+    </div>
+    <div class="cabecalho__desktop cabecalho">
+      <div class="cabecalho__desktop--item">
+        <img class="cabecalho__logo--img" src="assets/img/logo.png" alt="Logotipo da MAEZTRA">
+      </div>
+      <div class="cabecalho__desktop--item">
+        <input class="cabecalho__desktop--input" placeholder="O que você busca?" type="text">
+        <button class="capa__botao botao__buscar">Buscar</button>
+      </div>
+      <div class="cabecalho__desktop--item cabecalho__desktop--item__hover">
+        <svg class="lnr lnr-cart icon"><use xlink:href="#lnr-user"></use></svg>
+        Minha Conta
+      </div>
+      <div class="cabecalho__desktop--item cabecalho__desktop--item__hover">
+        <svg class="lnr lnr-cart icon"><use xlink:href="#lnr-cart"></use></svg>
+        Meu Carrinho
+      </div>
+    </div>
+    <div class="menu__desktop">
+      <div class="menu__desktop--item">Novidades</div>
+      <div class="menu__desktop--item">Vestidos</div>
+      <div class="menu__desktop--item">Roupas</div>
+      <div class="menu__desktop--item">Sapatos</div>
+      <div class="menu__desktop--item">Lingerie</div>
+      <div class="menu__desktop--item">Acessórios</div>
+      <div class="menu__desktop--item">OUTLET</div>
     </div>
   </header>
 
@@ -180,6 +206,50 @@
     </div>
   </div>
 
+  <div class="flex-grid secao__infos">
+    <div class="d-col-3 t-col-4 m-col-12">
+      <div class="collapsible">
+        <div>Informações</div>
+        <div class="secao__infos--acoes">
+          <div>+</div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content--item">Quem somos</div>
+        <div class="content--item">Prazo de Envio</div>
+        <div class="content--item">Trocas e devoluções</div>
+        <div class="content--item">Promoção e Cupons</div>
+      </div>
+    </div>
+    
+    <div class="d-col-3 t-col-4 m-col-12">
+      <div class="collapsible">
+        <div>Minha Conta</div>
+        <div class="secao__infos--acoes">
+          <div>+</div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content--item">Minha Conta</div>
+        <div class="content--item">Meus Pedidos</div>
+        <div class="content--item">Cadastre-se</div>
+      </div>
+    </div>
+    
+    <div class="d-col-3 t-col-4 m-col-12">
+      <div class="collapsible">
+        <div>Onde nos Encontrar</div>
+        <div class="secao__infos--acoes">
+          <div>+</div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content--item">Lojas</div>
+        <div class="content--item">Endereço</div>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="flex-grid" style="align-items: center; gap: 20px">
       <div class="d-col-4 t-col-4 m-col-12">
@@ -292,4 +362,19 @@
       }
     }
   })
+
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("hovered");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
 </script>
